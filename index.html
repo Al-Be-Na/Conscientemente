@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conscientemente | Cocina y Alimentación Saludable</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f8f5;
+      color: #2a3d2f;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #388e3c;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d0f0c0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 0.5rem;
+    }
+
+    .img-responsive {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    .tips, .links {
+      background-color: #d0f0c0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      background-color: #e6f0e9;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conscientemente</h1>
+    <p>Comer, Sentir y Amar Consciente</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#recetas">Recetas</a>
+    <a href="#consejos">Consejos</a>
+    <a href="#video">Video</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenida</h2>
+      <p>
+        Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos. 
+        En este espacio encontrarás ideas, inspiración y recetas que nutren cuerpo y alma.
+      </p>
+      <img src="https://images.unsplash.com/photo-1512058564366-c9e2f1db0b51?auto=format&fit=crop&w=1000&q=80" alt="Mesa con comida saludable" class="img-responsive">
+    </section>
+
+    <section id="recetas">
+      <h2>Receta destacada: Ensalada arcoíris</h2>
+      <ul>
+        <li>1 taza de hojas verdes</li>
+        <li>1/2 taza de zanahoria rallada</li>
+        <li>1/2 taza de remolacha cocida en cubos</li>
+        <li>1/2 aguacate</li>
+        <li>Semillas de girasol</li>
+        <li>Aliño: limón, aceite de oliva, sal marina</li>
+      </ul>
+      <p>Combina todos los ingredientes en un bowl. Disfruta de una comida viva y llena de color.</p>
+      <img src="https://images.unsplash.com/photo-1572438521733-2578fda8f30e?auto=format&fit=crop&w=1000&q=80" alt="Ensalada colorida" class="img-responsive">
+    </section>
+
+    <section id="consejos">
+      <h2>Consejos de Cocina Consciente</h2>
+      <div class="tips">
+        <ul>
+          <li>Cocina sin prisa: elige un momento tranquilo para preparar tus comidas.</li>
+          <li>Siente los ingredientes con las manos, huele, observa, agradece.</li>
+          <li>Escoge alimentos reales, sin etiquetas, lo más cercanos a su estado natural.</li>
+          <li>Usa colores en tu plato: los pigmentos vegetales son antioxidantes naturales.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Video Inspirador</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/3fX2I0xA1Ck" title="Video de alimentación saludable" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto y Recursos</h2>
+      <p>¿Quieres aprender más? Estos enlaces te pueden ayudar:</p>
+      <div class="links">
+        <ul>
+          <li><a href="https://nutricion.org" target="_blank">Sociedad Española de Nutrición</a></li>
+          <li><a href="https://www.eatforum.org" target="_blank">EAT - Alimentación sostenible</a></li>
+          <li><a href="mailto:hola@conscientemente.com">Escríbenos</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Conscientemente. Cocina y alimentación saludable para todos.
+  </footer>
+</body>
+</html>
