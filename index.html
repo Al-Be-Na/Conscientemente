@@ -1,170 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conscientemente | Cocina y Alimentación Saludable</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f0f8f5;
-      color: #2a3d2f;
-    }
-
-    header {
-      background-color: #4caf50;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #388e3c;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d0f0c0;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 0.5rem;
-    }
-
-    .img-responsive {
-      width: 100%;
-      border-radius: 10px;
-      margin: 1rem 0;
-    }
-
-    .tips, .links {
-      background-color: #d0f0c0;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    footer {
-      background-color: #e6f0e9;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Aventuras Globales te ofrece los mejores destinos para viajar y explorar el mundo. Planes personalizados, precios competitivos y experiencias inolvidables.">
+    <meta name="keywords" content="viajes, turismo, vacaciones, destinos, aventura, explorar, mundo">
+    
+    <title>Aventuras Globales - Tu Próximo Viaje Inolvidable</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Conscientemente</h1>
-    <p>Comer, Sentir y Amar Consciente</p>
-  </header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#recetas">Recetas</a>
-    <a href="#consejos">Consejos</a>
-    <a href="#video">Video</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+    <header>
+        <h1>Aventuras Globales</h1>
+        <nav>
+            <ul>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section id="inicio">
-      <h2>Bienvenida</h2>
-      <p>
-        Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos. 
-        En este espacio encontrarás ideas, inspiración y recetas que nutren cuerpo y alma.
-      </p>
-      <img src="https://images.unsplash.com/photo-1512058564366-c9e2f1db0b51?auto=format&fit=crop&w=1000&q=80" alt="Mesa con comida saludable" class="img-responsive">
-    </section>
+    <main>
+        <section class="hero">
+            <h2>Descubre Tu Próxima Aventura</h2>
+            <p>Explora los rincones más fascinantes del planeta con nosotros. Preparamos experiencias únicas adaptadas a tus sueños.</p>
+            <img src="https://placehold.co/1200x400/3498db/ffffff?text=Paisaje+Impresionante" 
+                 alt="Vista panorámica de una cadena montañosa al amanecer." 
+                 class="hero-image"> </section>
 
-    <section id="recetas">
-      <h2>Receta destacada: Ensalada arcoíris</h2>
-      <ul>
-        <li>1 taza de hojas verdes</li>
-        <li>1/2 taza de zanahoria rallada</li>
-        <li>1/2 taza de remolacha cocida en cubos</li>
-        <li>1/2 aguacate</li>
-        <li>Semillas de girasol</li>
-        <li>Aliño: limón, aceite de oliva, sal marina</li>
-      </ul>
-      <p>Combina todos los ingredientes en un bowl. Disfruta de una comida viva y llena de color.</p>
-      <img src="https://images.unsplash.com/photo-1572438521733-2578fda8f30e?auto=format&fit=crop&w=1000&q=80" alt="Ensalada colorida" class="img-responsive">
-    </section>
+        <section id="destinos" class="container">
+            <h2>Nuestros Destinos Populares</h2>
+            <ul>
+                <li><strong>Kyoto, Japón:</strong> Templos ancestrales y jardines serenos.</li>
+                <li><strong>Patagonia, Argentina/Chile:</strong> Trekking entre glaciares y montañas imponentes.</li>
+                <li><strong>Roma, Italia:</strong> Un viaje a través de la historia del Imperio Romano.</li>
+                <li><strong>Selva Amazónica, Brasil:</strong> La biodiversidad en su máxima expresión.</li>
+            </ul>
+        </section>
 
-    <section id="consejos">
-      <h2>Consejos de Cocina Consciente</h2>
-      <div class="tips">
+        <section id="precios" class="container content-image-split">
+            <div class="content-text">
+                <h2>Tabla de Precios</h2>
+                <p>Ofrecemos paquetes flexibles. Aquí tienes algunos ejemplos (precios por persona):</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Duración</th>
+                            <th>Precio (EUR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kyoto</td>
+                            <td>7 días</td>
+                            <td>€1,800</td>
+                        </tr>
+                        <tr>
+                            <td>Patagonia</td>
+                            <td>10 días</td>
+                            <td>€2,500</td>
+                        </tr>
+                        <tr>
+                            <td>Roma</td>
+                            <td>5 días</td>
+                            <td>€1,200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="content-image">
+                <img src="https://placehold.co/400x300/c2a784/333333?text=Mapa+Antiguo" 
+                     alt="Un mapa antiguo del mundo con una brújula encima."
+                     class="side-image"> </div>
+        </section>
+
+        <section id="contacto" class="container content-image-split reverse">
+            <div class="content-text">
+                <h2>Contáctanos</h2>
+                <p>¿Listo para empezar? Rellena el formulario y un asesor se pondrá en contacto contigo.</p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Enviar Consulta</button>
+                </form>
+            </div>
+            <div class="content-image">
+                <img src="https://placehold.co/400x300/8e8e8e/ffffff?text=Brújula" 
+                     alt="Una brújula de latón sobre una superficie de madera."
+                     class="side-image"> </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aventuras Globales. Todos los derechos reservados.</p>
         <ul>
-          <li>Cocina sin prisa: elige un momento tranquilo para preparar tus comidas.</li>
-          <li>Siente los ingredientes con las manos, huele, observa, agradece.</li>
-          <li>Escoge alimentos reales, sin etiquetas, lo más cercanos a su estado natural.</li>
-          <li>Usa colores en tu plato: los pigmentos vegetales son antioxidantes naturales.</li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos de Servicio</a></li>
         </ul>
-      </div>
-    </section>
+    </footer>
 
-    <section id="video">
-      <h2>Video Inspirador</h2>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/3fX2I0xA1Ck" title="Video de alimentación saludable" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto y Recursos</h2>
-      <p>¿Quieres aprender más? Estos enlaces te pueden ayudar:</p>
-      <div class="links">
-        <ul>
-          <li><a href="https://nutricion.org" target="_blank">Sociedad Española de Nutrición</a></li>
-          <li><a href="https://www.eatforum.org" target="_blank">EAT - Alimentación sostenible</a></li>
-          <li><a href="mailto:hola@conscientemente.com">Escríbenos</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Conscientemente. Cocina y alimentación saludable para todos.
-  </footer>
 </body>
 </html>
