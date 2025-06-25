@@ -2,111 +2,502 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Descubre recetas saludables, planes de alimentación y consejos para un estilo de vida activo y equilibrado con NutriVida. Come bien, vive mejor.">
-    <meta name="keywords" content="cocina saludable, alimentación, nutrición, recetas, dieta, bienestar, comida sana">
-    
-    <title>NutriVida - Cocina y Alimentación Saludable</title>
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscientemente | Nutrición Holística y Bienestar Integral</title>
+    <meta name="description" content="Transforma tu vida con Conscientemente. Aprende sobre alimentación consciente (mindful eating), nutrición holística y encuentra el equilibrio interior para un bienestar integral.">
+    <meta name="keywords" content="alimentación consciente, mindful eating, nutrición holística, bienestar integral, vida sana, equilibrio interior, comunidad consciente, recetas saludables, paz mental, desarrollo personal, cocina saludable, posicionamiento web nutricion">
+    <meta name="author" content="Conscientemente Team">
+    <link rel="canonical" href="https://tudominio.github.io/index.html">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <style>
+        /* 1. CONFIGURACIÓN Y PALETA DE COLORES */
+        :root {
+            --color-primary: #008080;   /* Teal Profundo */
+            --color-secondary: #d2b48c;   /* Tan (Dorado suave) */
+            --color-dark: #333333;      /* Gris Carbón (Texto) */
+            --color-light: #f5f5dc;      /* Beige (Fondo) */
+            --color-white: #ffffff;
+            --color-shadow-light: rgba(0, 0, 0, 0.08);
+            --spacing-unit: 20px;
+            --content-max-width: 1200px;
+            --border-radius: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Garamond', 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            line-height: 1.7;
+        }
+
+        /* 2. HEADER Y NAVEGACIÓN */
+        header {
+            background-color: var(--color-white);
+            padding: var(--spacing-unit) 0;
+            box-shadow: 0 4px 12px var(--color-shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            max-width: var(--content-max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li a {
+            color: var(--color-dark);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            white-space: nowrap;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        /* 3. SECCIÓN HERO (INICIO) */
+        #inicio {
+            position: relative;
+            /* IMAGEN DE PORTADA MODIFICADA - RECUERDA CAMBIAR ESTA URL POR LA DE TU FOTO */
+            background-image: url('https://placehold.co/1800x800/008080/f5f5dc?text=Conscientemente%0ACome,+Siente,+Ama,+Vive');
+            background-size: cover;
+            background-position: center center;
+            text-align: center;
+            padding: calc(var(--spacing-unit) * 7) var(--spacing-unit);
+            color: var(--color-white);
+        }
+        #inicio::before { /* Overlay para legibilidad */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* NUEVO ESTILO PARA EL TÍTULO SUPERIOR */
+        #inicio .main-title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin: 0;
+            display: block;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+        #inicio h2 { /* Título principal */
+            font-size: 3.8rem;
+            font-family: 'Garamond', serif;
+            font-weight: 600;
+            margin-bottom: var(--spacing-unit);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            margin-top: 10px;
+        }
+        #inicio p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto calc(var(--spacing-unit) * 2) auto;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+        .cta-button {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 4px 15px rgba(0, 128, 128, 0.2);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+
+        /* 4. SECCIÓN CARRUSEL */
+        #carrusel-recetas {
+            padding: calc(var(--spacing-unit) * 4) 0;
+            background-color: var(--color-white);
+            position: relative;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-family: 'Garamond', serif;
+            font-weight: 500;
+            color: var(--color-primary);
+            margin-bottom: calc(var(--spacing-unit) * 2.5);
+        }
+        .carousel-container {
+            max-width: var(--content-max-width);
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: var(--border-radius);
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        .slide img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            display: block;
+            background-color: #eee; /* Color de fondo mientras carga la imagen */
+        }
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            color: var(--color-white);
+            padding: calc(var(--spacing-unit) * 2.5) var(--spacing-unit);
+            text-align: center;
+        }
+        .slide-caption h3 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            font-family: 'Garamond', serif;
+            font-weight: 500;
+        }
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px;
+            box-sizing: border-box;
+            z-index: 5;
+        }
+        .carousel-button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            transition: background-color 0.3s ease;
+            color: var(--color-primary);
+        }
+        .carousel-button:hover {
+            background-color: var(--color-white);
+        }
+
+        /* 5. SECCIÓN DE BLOQUES (PILARES, GUÍAS, ETC) */
+        .bloques-section {
+            padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+            background-color: var(--color-light);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: calc(var(--spacing-unit) * 2.5);
+            max-width: var(--content-max-width);
+            margin: auto;
+        }
+        .grid-item {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius);
+            padding: calc(var(--spacing-unit) * 2);
+            text-align: center;
+            box-shadow: 0 8px 25px var(--color-shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--color-secondary);
+        }
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        .grid-item .icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: var(--spacing-unit);
+            color: var(--color-primary);
+        }
+        .grid-item h3 {
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: calc(var(--spacing-unit) * 0.75);
+            color: var(--color-dark);
+            font-family: 'Garamond', serif;
+            font-weight: 600;
+        }
+        .grid-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        /* Párrafo con texto añadido */
+        .grid-item .added-text {
+            display: block;
+            margin-top: 15px;
+            font-style: italic;
+            color: var(--color-primary);
+        }
+        
+        /* 6. SECCIÓN FAQ */
+        #faq {
+            padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+            background-color: var(--color-white);
+        }
+        .faq-container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: var(--spacing-unit);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.3rem;
+            font-family: 'Garamond', serif;
+            font-weight: 600;
+            color: var(--color-dark);
+            padding: var(--spacing-unit) 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 2rem;
+            color: var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+        }
+        .faq-answer p {
+            padding: 0 0 var(--spacing-unit) 0;
+            margin: 0;
+        }
+
+        /* 7. FOOTER */
+        footer {
+            background-color: var(--color-dark);
+            color: var(--color-light);
+            padding: calc(var(--spacing-unit) * 2.5);
+            text-align: center;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 8. ANIMACIONES */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 9. AJUSTES RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            header h1 {
+                margin-bottom: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li a {
+                padding: 10px 15px;
+            }
+            #inicio {
+                padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
+            }
+             #inicio .main-title {
+                font-size: 2rem;
+            }
+            #inicio h2 {
+                font-size: 2.8rem;
+            }
+            #inicio p {
+                font-size: 1.1rem;
+            }
+            .slide img {
+                height: 400px;
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z39F2YFW1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8Z39F2YFW1');
+</script>
+<body>
     <header>
-        <h1>NutriVida</h1>
-        <nav>
-            <ul>
-                <li><a href="#recetas">Recetas</a></li>
-                <li><a href="#plan-comidas">Planes</a></li>
-                <li><a href="#suscripcion">Suscríbete</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1><a href="#inicio">Conscientemente</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#guia-habitos">Guía Hábitos Saludables</a></li>
+                    <li><a href="#carrusel-recetas">Recetas</a></li>
+                    <li><a href="#pilares">Filosofía</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#interes">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Come Bien, Vive Mejor</h2>
-            <p>Descubre el placer de cocinar platos deliciosos que nutren tu cuerpo y tu mente. Tu viaje hacia el bienestar empieza aquí.</p>
-            <img src="https://placehold.co/1200x400/2ecc71/ffffff?text=Plato+Saludable+y+Colorido" 
-                 alt="Ensalada vibrante con quinoa, aguacate, pimientos y hojas verdes." 
-                 class="hero-image"> </section>
-
-        <section id="recetas" class="container">
-            <h2>Recetas Estrella de la Semana</h2>
-            <ul>
-                <li><strong>Ensalada de Quinoa y Aguacate:</strong> Ligera, nutritiva y llena de sabor.</li>
-                <li><strong>Salmón al Horno con Espárragos:</strong> Una cena rica en Omega-3 lista en 20 minutos.</li>
-                <li><strong>Batido Verde Energético:</strong> El impulso perfecto para empezar tu día.</li>
-                <li><strong>Lentejas Estofadas con Verduras:</strong> Un clásico reconfortante y lleno de fibra.</li>
-            </ul>
-        </section>
-
-        <section id="plan-comidas" class="container content-image-split">
-            <div class="content-text">
-                <h2>Ejemplo de Plan de Comidas</h2>
-                <p>Una estructura simple puede ayudarte a mantener tus objetivos (valores aproximados):</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Comida</th>
-                            <th>Plato Principal</th>
-                            <th>Calorías (aprox.)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Desayuno</td>
-                            <td>Avena con frutas y nueces</td>
-                            <td>400 kcal</td>
-                        </tr>
-                        <tr>
-                            <td>Almuerzo</td>
-                            <td>Pechuga de pollo a la plancha con ensalada</td>
-                            <td>550 kcal</td>
-                        </tr>
-                        <tr>
-                            <td>Cena</td>
-                            <td>Crema de calabacín y merluza al vapor</td>
-                            <td>450 kcal</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section id="inicio">
+            <div class="hero-content">
+                <span class="main-title">Conscientemente</span>
+                <h2>Come, Siente, Ama, Vive</h2>
+                <p>Descubre la nutrición holística y el mindful eating. Un espacio para reconectar contigo a través del alimento, cultivar tu paz interior y vivir una vida más plena y auténtica.</p>
+                <a href="#nutricion-plena" class="cta-button">¿Que es la Cocina Sana?</a>
             </div>
-            <div class="content-image">
-                <img src="https://placehold.co/400x300/f39c12/ffffff?text=Ingredientes+Frescos" 
-                     alt="Bodegón con verduras frescas como tomates, brócoli y zanahorias."
-                     class="side-image"> </div>
         </section>
 
-        <section id="suscripcion" class="container content-image-split reverse">
-            <div class="content-text">
-                <h2>Suscríbete a Nuestro Boletín</h2>
-                <p>Recibe cada semana nuevas recetas, consejos de nutrición y listas de la compra directamente en tu correo.</p>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
+        <section id="carrusel-recetas">
+            <h2 class="section-title">Inspiración para tu Cocina Saludable: RECETAS</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="slide">
+                        <img src="https://placehold.co/1200x550/008080/FFFFFF?text=Comidas+Completas" alt="Ensalada saludable de quinoa con aguacate y pollo, un ejemplo de nutrición holística." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
+                        <div class="slide-caption">
+                            <h3>Comidas Completas y Nutritivas</h3>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="slide">
+                        <img src="https://placehold.co/1200x550/d2b48c/333333?text=Desayunos+Energéticos" alt="Tostadas con aguacate y huevo, un desayuno energético para una vida sana." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
+                        <div class="slide-caption">
+                            <h3>Desayunos que Despiertan tus Sentidos</h3>
+                        </div>
                     </div>
-                    <button type="submit">¡Quiero Suscribirme!</button>
-                </form>
+                    <div class="slide">
+                        <img src="https://placehold.co/1200x550/008080/FFFFFF?text=Postres+Saludables" alt="Postre saludable a base de frutas del bosque y yogur, un capricho sin culpa." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
+                        <div class="slide-caption">
+                            <h3>Postres que Nutren el Alma</h3>
+                        </div>
+                    </div>
+                     <div class="slide">
+                        <img src="https://placehold.co/1200x550/d2b48c/333333?text=Bebidas+Revitalizantes" alt="Batido verde detox, una bebida revitalizante para el bienestar integral." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
+                        <div class="slide-caption">
+                            <h3>Bebidas que Revitalizan</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-button" id="prevBtn">❮</button>
+                    <button class="carousel-button" id="nextBtn">❯</button>
+                </div>
             </div>
-            <div class="content-image">
-                <img src="https://placehold.co/400x300/9b59b6/ffffff?text=Cuaderno+de+Recetas" 
-                     alt="Un cuaderno abierto con notas sobre recetas junto a una pluma."
-                     class="side-image"> </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 NutriVida. Todos los derechos reservados.</p>
-        <ul>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </footer>
+        <section id="guia-habitos" class="bloques-section">
+            <h2 class="section-title fade-in-section">Tu Guía para una Vida Saludable</h2>
+            <div class="grid-container">
+                <div class="grid-item fade-in-section">
+                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg>
+                    <h3>Guía de Hábitos Saludables</h3>
+                    <p>Pequeños cambios diarios que generan un gran impacto. Descubre guías prácticas para incorporar hábitos que nutran tu cuerpo y mente de forma sostenible.</p>
+                </div>
+                <div class="grid-item fade-in-section">
+                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <h3>Alimentos y cómo combinar</h3>
+                    <p>Aprende los secretos para combinar alimentos de manera inteligente, maximizando su valor nutricional y creando platos deliciosos que te llenen de energía.</p>
+                </div>
+            </div>
+        </section>
 
-</body>
-</html>
+        <section id="pilares" class="bloques-section" style="background-color: var(--color-white);">
+            <h2 class="section-title fade-in-section">Los 3 Pilares de tu Bienestar Integral</h2>
+            <div class="grid-container">
+                <div id="nutricion-plena" class="grid-item fade-in-section">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 00.7-17.937 9 9 0 11-1.4 17.237c.463.2.955.3 1.455.4zM12 6v6l4 2" /></svg>
+                    <h3>Nutrición Plena</h3>
+                    <p>Elige alimentos que te llenen de vida. Aprende a comer con intención (mindful eating), escuchando a tu cuerpo y disfrutando cada bocado para un bienestar completo.
+                    <span class="added-text">"Cocina Sana no es una dieta. Es una forma de vivir. Volver al origen: elegir ingredientes naturales, combinarlos con intuición, cocinarlos con respeto y tiempo, servirlos con cariño".</span>
+                    </p>
+                </div>
+                <div class="grid-item fade-in-section">
+                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+                    <h3>Equilibrio Interior</h3>
+                    <p>Tu bienestar va más allá del plato. Cultiva la calma mental y la serenidad a través de prácticas de meditación, mindfulness y autocuidado para alcanzar la paz interior.</p>
+                </div>
+                <div class="grid-item fade-in-section">
+                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.75a3 3 0 00-3-3H9a3 3 0 00-3 3m12 0a3 3 0 0
