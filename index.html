@@ -1,503 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conscientemente | Nutrición Holística y Bienestar Integral</title>
-    <meta name="description" content="Transforma tu vida con Conscientemente. Aprende sobre alimentación consciente (mindful eating), nutrición holística y encuentra el equilibrio interior para un bienestar integral.">
-    <meta name="keywords" content="alimentación consciente, mindful eating, nutrición holística, bienestar integral, vida sana, equilibrio interior, comunidad consciente, recetas saludables, paz mental, desarrollo personal, cocina saludable, posicionamiento web nutricion">
-    <meta name="author" content="Conscientemente Team">
-    <link rel="canonical" href="https://tudominio.github.io/index.html">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conscientemente - Comer, Sentir y Amar Consciente</title>
+  <meta name="description" content="Transforma cómo comes, sientes y vives con Conscientemente. Explora recetas, conciencia alimentaria y mucho más.">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Estilos esenciales directamente aquí o en styles.css */
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      margin: 2rem auto;
+      max-width: 90%;
+    }
+    .carousel-track {
+      display: flex;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+    }
+    .carousel-track img {
+      width: 100%;
+      max-width: 300px;
+      margin-right: 1rem;
+      border-radius: 10px;
+    }
+    .carousel-prev, .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.8);
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 10;
+    }
+    .carousel-prev { left: 0; }
+    .carousel-next { right: 0; }
 
-    <style>
-        /* 1. CONFIGURACIÓN Y PALETA DE COLORES */
-        :root {
-            --color-primary: #008080;   /* Teal Profundo */
-            --color-secondary: #d2b48c;   /* Tan (Dorado suave) */
-            --color-dark: #333333;      /* Gris Carbón (Texto) */
-            --color-light: #f5f5dc;      /* Beige (Fondo) */
-            --color-white: #ffffff;
-            --color-shadow-light: rgba(0, 0, 0, 0.08);
-            --spacing-unit: 20px;
-            --content-max-width: 1200px;
-            --border-radius: 12px;
-        }
+    .faq-item {
+      margin: 1rem 0;
+    }
+    .faq-question {
+      background: #eee;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .faq-answer {
+      padding: 1rem;
+      border-left: 3px solid #ccc;
+      background: #f9f9f9;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Garamond', 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-light);
-            color: var(--color-dark);
-            line-height: 1.7;
-        }
-
-        /* 2. HEADER Y NAVEGACIÓN */
-        header {
-            background-color: var(--color-white);
-            padding: var(--spacing-unit) 0;
-            box-shadow: 0 4px 12px var(--color-shadow-light);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .header-container {
-            max-width: var(--content-max-width);
-            margin: 0 auto;
-            padding: 0 var(--spacing-unit);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-        header h1 a {
-            color: inherit;
-            text-decoration: none;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li a {
-            color: var(--color-dark);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            white-space: nowrap;
-        }
-        nav ul li a:hover, nav ul li a.active {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-        }
-        
-        /* 3. SECCIÓN HERO (INICIO) */
-        #inicio {
-            position: relative;
-            /* IMAGEN DE PORTADA MODIFICADA - RECUERDA CAMBIAR ESTA URL POR LA DE TU FOTO */
-            background-image: url('https://placehold.co/1800x800/008080/f5f5dc?text=Conscientemente%0ACome,+Siente,+Ama,+Vive');
-            background-size: cover;
-            background-position: center center;
-            text-align: center;
-            padding: calc(var(--spacing-unit) * 7) var(--spacing-unit);
-            color: var(--color-white);
-        }
-        #inicio::before { /* Overlay para legibilidad */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        /* NUEVO ESTILO PARA EL TÍTULO SUPERIOR */
-        #inicio .main-title {
-            font-size: 2.5rem;
-            font-weight: 500;
-            margin: 0;
-            display: block;
-            text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
-            letter-spacing: 2px;
-        }
-        #inicio h2 { /* Título principal */
-            font-size: 3.8rem;
-            font-family: 'Garamond', serif;
-            font-weight: 600;
-            margin-bottom: var(--spacing-unit);
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-            margin-top: 10px;
-        }
-        #inicio p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto calc(var(--spacing-unit) * 2) auto;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-        }
-        .cta-button {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 2px solid var(--color-primary);
-            box-shadow: 0 4px 15px rgba(0, 128, 128, 0.2);
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: rgba(255, 255, 255, 0.9);
-            color: var(--color-primary);
-            border-color: var(--color-primary);
-            transform: translateY(-3px);
-        }
-
-        /* 4. SECCIÓN CARRUSEL */
-        #carrusel-recetas {
-            padding: calc(var(--spacing-unit) * 4) 0;
-            background-color: var(--color-white);
-            position: relative;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            font-family: 'Garamond', serif;
-            font-weight: 500;
-            color: var(--color-primary);
-            margin-bottom: calc(var(--spacing-unit) * 2.5);
-        }
-        .carousel-container {
-            max-width: var(--content-max-width);
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            border-radius: var(--border-radius);
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            position: relative;
-        }
-        .slide img {
-            width: 100%;
-            height: 550px;
-            object-fit: cover;
-            display: block;
-            background-color: #eee; /* Color de fondo mientras carga la imagen */
-        }
-        .slide-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-            color: var(--color-white);
-            padding: calc(var(--spacing-unit) * 2.5) var(--spacing-unit);
-            text-align: center;
-        }
-        .slide-caption h3 {
-            margin: 0 0 10px 0;
-            font-size: 2rem;
-            font-family: 'Garamond', serif;
-            font-weight: 500;
-        }
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 25px;
-            box-sizing: border-box;
-            z-index: 5;
-        }
-        .carousel-button {
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            transition: background-color 0.3s ease;
-            color: var(--color-primary);
-        }
-        .carousel-button:hover {
-            background-color: var(--color-white);
-        }
-
-        /* 5. SECCIÓN DE BLOQUES (PILARES, GUÍAS, ETC) */
-        .bloques-section {
-            padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
-            background-color: var(--color-light);
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: calc(var(--spacing-unit) * 2.5);
-            max-width: var(--content-max-width);
-            margin: auto;
-        }
-        .grid-item {
-            background-color: var(--color-white);
-            border-radius: var(--border-radius);
-            padding: calc(var(--spacing-unit) * 2);
-            text-align: center;
-            box-shadow: 0 8px 25px var(--color-shadow-light);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid var(--color-secondary);
-        }
-        .grid-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-        }
-        .grid-item .icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: var(--spacing-unit);
-            color: var(--color-primary);
-        }
-        .grid-item h3 {
-            font-size: 1.6rem;
-            margin-top: 0;
-            margin-bottom: calc(var(--spacing-unit) * 0.75);
-            color: var(--color-dark);
-            font-family: 'Garamond', serif;
-            font-weight: 600;
-        }
-        .grid-item p {
-            font-size: 1rem;
-            margin-bottom: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        /* Párrafo con texto añadido */
-        .grid-item .added-text {
-            display: block;
-            margin-top: 15px;
-            font-style: italic;
-            color: var(--color-primary);
-        }
-        
-        /* 6. SECCIÓN FAQ */
-        #faq {
-            padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
-            background-color: var(--color-white);
-        }
-        .faq-container {
-            max-width: 900px;
-            margin: auto;
-        }
-        .faq-item {
-            border-bottom: 1px solid #ddd;
-            margin-bottom: var(--spacing-unit);
-        }
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            text-align: left;
-            font-size: 1.3rem;
-            font-family: 'Garamond', serif;
-            font-weight: 600;
-            color: var(--color-dark);
-            padding: var(--spacing-unit) 0;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-question::after {
-            content: '+';
-            font-size: 2rem;
-            color: var(--color-primary);
-            transition: transform 0.3s ease;
-        }
-        .faq-question.active::after {
-            transform: rotate(45deg);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.4s ease;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 1rem;
-        }
-        .faq-answer p {
-            padding: 0 0 var(--spacing-unit) 0;
-            margin: 0;
-        }
-
-        /* 7. FOOTER */
-        footer {
-            background-color: var(--color-dark);
-            color: var(--color-light);
-            padding: calc(var(--spacing-unit) * 2.5);
-            text-align: center;
-        }
-        footer p {
-            margin: 5px 0;
-        }
-        footer a {
-            color: var(--color-secondary);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        /* 8. ANIMACIONES */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* 9. AJUSTES RESPONSIVE */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-            header h1 {
-                margin-bottom: 15px;
-            }
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            nav ul li a {
-                padding: 10px 15px;
-            }
-            #inicio {
-                padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
-            }
-             #inicio .main-title {
-                font-size: 2rem;
-            }
-            #inicio h2 {
-                font-size: 2.8rem;
-            }
-            #inicio p {
-                font-size: 1.1rem;
-            }
-            .slide img {
-                height: 400px;
-            }
-            .section-title {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z39F2YFW1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8Z39F2YFW1');
-</script>
 <body>
-    <header>
-        <div class="header-container">
-            <h1><a href="#inicio">Conscientemente</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#guia-habitos">Guía Hábitos Saludables</a></li>
-                    <li><a href="#carrusel-recetas">Recetas</a></li>
-                    <li><a href="#pilares">Filosofía</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#interes">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <section id="inicio">
-            <div class="hero-content">
-                <span class="main-title">Conscientemente</span>
-                <h2>Come, Siente, Ama, Vive</h2>
-                <p>Descubre la nutrición holística y el mindful eating. Un espacio para reconectar contigo a través del alimento, cultivar tu paz interior y vivir una vida más plena y auténtica.</p>
-                <a href="#nutricion-plena" class="cta-button">¿Que es la Cocina Sana?</a>
-            </div>
-        </section>
+  <header class="fade-in">
+    <h1>Conscientemente</h1>
+    <p><strong>Comer, Sentir y Amar Consciente</strong></p>
+    <p>Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos.</p>
+  </header>
 
-        <section id="carrusel-recetas">
-            <h2 class="section-title">Inspiración para tu Cocina Saludable: RECETAS</h2>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="slide">
-                        <img src="https://placehold.co/1200x550/008080/FFFFFF?text=Comidas+Completas" alt="Ensalada saludable de quinoa con aguacate y pollo, un ejemplo de nutrición holística." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
-                        <div class="slide-caption">
-                            <h3>Comidas Completas y Nutritivas</h3>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://placehold.co/1200x550/d2b48c/333333?text=Desayunos+Energéticos" alt="Tostadas con aguacate y huevo, un desayuno energético para una vida sana." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
-                        <div class="slide-caption">
-                            <h3>Desayunos que Despiertan tus Sentidos</h3>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://placehold.co/1200x550/008080/FFFFFF?text=Postres+Saludables" alt="Postre saludable a base de frutas del bosque y yogur, un capricho sin culpa." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
-                        <div class="slide-caption">
-                            <h3>Postres que Nutren el Alma</h3>
-                        </div>
-                    </div>
-                     <div class="slide">
-                        <img src="https://placehold.co/1200x550/d2b48c/333333?text=Bebidas+Revitalizantes" alt="Batido verde detox, una bebida revitalizante para el bienestar integral." onerror="this.onerror=null;this.src='https://placehold.co/1200x550/cccccc/ffffff?text=Imagen+no+disponible';">
-                        <div class="slide-caption">
-                            <h3>Bebidas que Revitalizan</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <button class="carousel-button" id="prevBtn">❮</button>
-                    <button class="carousel-button" id="nextBtn">❯</button>
-                </div>
-            </div>
-        </section>
+  <section class="carousel fade-in" role="region" aria-label="Recetas destacadas">
+    <button class="carousel-prev" aria-label="Anterior receta">&#8592;</button>
+    <div class="carousel-track" tabindex="0">
+      <img src="img/bowl.jpg" alt="Bowl de quinoa con vegetales" loading="lazy" />
+      <img src="img/smoothie.jpg" alt="Smoothie verde revitalizante" loading="lazy" />
+      <img src="img/ensalada.jpg" alt="Ensalada arcoiris saludable" loading="lazy" />
+    </div>
+    <button class="carousel-next" aria-label="Siguiente receta">&#8594;</button>
+  </section>
 
-        <section id="guia-habitos" class="bloques-section">
-            <h2 class="section-title fade-in-section">Tu Guía para una Vida Saludable</h2>
-            <div class="grid-container">
-                <div class="grid-item fade-in-section">
-                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg>
-                    <h3>Guía de Hábitos Saludables</h3>
-                    <p>Pequeños cambios diarios que generan un gran impacto. Descubre guías prácticas para incorporar hábitos que nutran tu cuerpo y mente de forma sostenible.</p>
-                </div>
-                <div class="grid-item fade-in-section">
-                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <h3>Alimentos y cómo combinar</h3>
-                    <p>Aprende los secretos para combinar alimentos de manera inteligente, maximizando su valor nutricional y creando platos deliciosos que te llenen de energía.</p>
-                </div>
-            </div>
-        </section>
+  <section class="faq fade-in" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="respuesta1">
+        ¿Qué es la alimentación consciente?
+      </button>
+      <div id="respuesta1" class="faq-answer" hidden>
+        Es prestar atención plena al acto de comer, reconociendo señales internas de hambre y saciedad.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="respuesta2">
+        ¿Ofrecen productos o cursos?
+      </button>
+      <div id="respuesta2" class="faq-answer" hidden>
+        Aún no, pero estamos desarrollando propuestas centradas en salud integral, alimentación, cuerpo y emociones.
+      </div>
+    </div>
+  </section>
 
-        <section id="pilares" class="bloques-section" style="background-color: var(--color-white);">
-            <h2 class="section-title fade-in-section">Los 3 Pilares de tu Bienestar Integral</h2>
-            <div class="grid-container">
-                <div id="nutricion-plena" class="grid-item fade-in-section">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 00.7-17.937 9 9 0 11-1.4 17.237c.463.2.955.3 1.455.4zM12 6v6l4 2" /></svg>
-                    <h3>Nutrición Plena</h3>
-                    <p>Elige alimentos que te llenen de vida. Aprende a comer con intención (mindful eating), escuchando a tu cuerpo y disfrutando cada bocado para un bienestar completo.
-                    <span class="added-text">"Cocina Sana no es una dieta. Es una forma de vivir. Volver al origen: elegir ingredientes naturales, combinarlos con intuición, cocinarlos con respeto y tiempo, servirlos con cariño".</span>
-                    </p>
-                </div>
-                <div class="grid-item fade-in-section">
-                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
-                    <h3>Equilibrio Interior</h3>
-                    <p>Tu bienestar va más allá del plato. Cultiva la calma mental y la serenidad a través de prácticas de meditación, mindfulness y autocuidado para alcanzar la paz interior.</p>
-                </div>
-                <div class="grid-item fade-in-section">
-                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.75a3 3 0 00-3-3H9a3 3 0 00-3 3m12 0a3 3 0 0
+  <footer class="fade-in">
+    <p>© 2025 Conscientemente. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Carrusel
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.carousel-track');
+      const prev = document.querySelector('.carousel-prev');
+      const next = document.querySelector('.carousel-next');
+
+      let index = 0;
+      const scrollStep = track.clientWidth;
+
+      function scrollToIndex(i) {
+        index = i;
+        track.scrollTo({ left: index * scrollStep, behavior: 'smooth' });
+      }
+
+      prev.addEventListener('click', () => {
+        if (index > 0) scrollToIndex(index - 1);
+      });
+
+      next.addEventListener('click', () => {
+        if (index < track.children.length - 1) scrollToIndex(index + 1);
+      });
+
+      // Swipe táctil
+      let startX = 0;
+      track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+      track.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) next.click();
+        if (endX - startX > 50) prev.click();
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(button.getAttribute('aria-controls'));
+        button.setAttribute('aria-expanded', !expanded);
+        content.hidden = expanded;
+      });
+    });
+
+    // Fade-in al hacer scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
