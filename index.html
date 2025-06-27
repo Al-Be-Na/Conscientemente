@@ -1,176 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conscientemente - Comer, Sentir y Amar Consciente. Vuelva al Origen de la alimentación natural y saludable." />
+  <meta name="keywords" content="alimentación consciente, vida sana, comida saludable, bienestar, verduras, frutas, comida real" />
+  <meta name="author" content="Conscientemente">
   <title>Conscientemente - Comer, Sentir y Amar Consciente</title>
-  <meta name="description" content="Transforma cómo comes, sientes y vives con Conscientemente. Explora recetas, conciencia alimentaria y mucho más.">
-  <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Estilos esenciales directamente aquí o en styles.css */
     body {
-      font-family: sans-serif;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: #fff;
+      padding: 0;
+      background-color: #f7f7f7;
       color: #333;
     }
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      margin: 2rem auto;
-      max-width: 90%;
-    }
-    .carousel-track {
-      display: flex;
-      scroll-behavior: smooth;
-      overflow-x: auto;
-    }
-    .carousel-track img {
-      width: 100%;
-      max-width: 300px;
-      margin-right: 1rem;
-      border-radius: 10px;
-    }
-    .carousel-prev, .carousel-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.8);
-      border: none;
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 0.5rem;
-      z-index: 10;
-    }
-    .carousel-prev { left: 0; }
-    .carousel-next { right: 0; }
-
-    .faq-item {
-      margin: 1rem 0;
-    }
-    .faq-question {
-      background: #eee;
-      border: none;
-      width: 100%;
-      text-align: left;
+    header, footer {
+      background-color: #3a5a40;
+      color: white;
+      text-align: center;
       padding: 1rem;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+    .hero {
+      width: 100%;
+      height: auto;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .responsive-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .responsive-table th, .responsive-table td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    .formulario {
+      background-color: #e9f5ec;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #588157;
+      color: white;
       font-weight: bold;
       cursor: pointer;
     }
-    .faq-answer {
-      padding: 1rem;
-      border-left: 3px solid #ccc;
-      background: #f9f9f9;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header class="fade-in">
+  <header>
     <h1>Conscientemente</h1>
-    <p><strong>Comer, Sentir y Amar Consciente</strong></p>
-    <p>Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos.</p>
+    <p>Comer, Sentir y Amar Consciente</p>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#alimentos">Alimentos</a>
+      <a href="#formulario">Contacto</a>
+    </nav>
   </header>
 
-  <section class="carousel fade-in" role="region" aria-label="Recetas destacadas">
-    <button class="carousel-prev" aria-label="Anterior receta">&#8592;</button>
-    <div class="carousel-track" tabindex="0">
-      <img src="img/bowl.jpg" alt="Bowl de quinoa con vegetales" loading="lazy" />
-      <img src="img/smoothie.jpg" alt="Smoothie verde revitalizante" loading="lazy" />
-      <img src="img/ensalada.jpg" alt="Ensalada arcoiris saludable" loading="lazy" />
-    </div>
-    <button class="carousel-next" aria-label="Siguiente receta">&#8594;</button>
-  </section>
+  <main>
+    <section id="inicio" class="section">
+      <img src="/mnt/data/1.Foto de Portada.jpg" alt="Vuelva al Origen - Mesa con alimentos naturales" class="hero">
+      <h2>Bienvenidos a Conscientemente</h2>
+      <p>Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos.</p>
+    </section>
 
-  <section class="faq fade-in" aria-label="Preguntas frecuentes">
-    <h2>Preguntas Frecuentes</h2>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="respuesta1">
-        ¿Qué es la alimentación consciente?
-      </button>
-      <div id="respuesta1" class="faq-answer" hidden>
-        Es prestar atención plena al acto de comer, reconociendo señales internas de hambre y saciedad.
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="respuesta2">
-        ¿Ofrecen productos o cursos?
-      </button>
-      <div id="respuesta2" class="faq-answer" hidden>
-        Aún no, pero estamos desarrollando propuestas centradas en salud integral, alimentación, cuerpo y emociones.
-      </div>
-    </div>
-  </section>
+    <section id="alimentos" class="section">
+      <h2>Alimentos Saludables</h2>
+      <p>La naturaleza nos ofrece una riqueza de alimentos vivos que nutren cuerpo y alma. Aquí destacamos algunos de los más importantes:</p>
 
-  <footer class="fade-in">
-    <p>© 2025 Conscientemente. Todos los derechos reservados.</p>
+      <img src="/mnt/data/Carusel..Los Alimentos Saludables.png" alt="Carusel de alimentos saludables">
+
+      <ul>
+        <li>Frutas y Verduras frescas</li>
+        <li>Grasas saludables como aguacate y frutos secos</li>
+        <li>Fuentes de proteína natural</li>
+      </ul>
+
+      <img src="/mnt/data/dentro la sección de.Alimentos.saludables.-Vedruras y Frutas.jpeg" alt="Corazón de vegetales y frutas coloridas">
+
+      <h3>Tabla de nutrientes esenciales</h3>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Alimento</th>
+            <th>Beneficio</th>
+            <th>Grupo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aguacate</td>
+            <td>Grasa saludable y fibra</td>
+            <td>Fruta</td>
+          </tr>
+          <tr>
+            <td>Brócoli</td>
+            <td>Alto en vitamina C y fibra</td>
+            <td>Verdura</td>
+          </tr>
+          <tr>
+            <td>Salmón</td>
+            <td>Omega-3 y proteína</td>
+            <td>Pescado</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="formulario" class="section">
+      <h2>Contáctanos</h2>
+      <form class="formulario" action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Conscientemente. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    // Carrusel
-    document.addEventListener('DOMContentLoaded', () => {
-      const track = document.querySelector('.carousel-track');
-      const prev = document.querySelector('.carousel-prev');
-      const next = document.querySelector('.carousel-next');
-
-      let index = 0;
-      const scrollStep = track.clientWidth;
-
-      function scrollToIndex(i) {
-        index = i;
-        track.scrollTo({ left: index * scrollStep, behavior: 'smooth' });
-      }
-
-      prev.addEventListener('click', () => {
-        if (index > 0) scrollToIndex(index - 1);
-      });
-
-      next.addEventListener('click', () => {
-        if (index < track.children.length - 1) scrollToIndex(index + 1);
-      });
-
-      // Swipe táctil
-      let startX = 0;
-      track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-      track.addEventListener('touchend', e => {
-        const endX = e.changedTouches[0].clientX;
-        if (startX - endX > 50) next.click();
-        if (endX - startX > 50) prev.click();
-      });
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        const content = document.getElementById(button.getAttribute('aria-controls'));
-        button.setAttribute('aria-expanded', !expanded);
-        content.hidden = expanded;
-      });
-    });
-
-    // Fade-in al hacer scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
