@@ -1,162 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conscientemente - Comer, Sentir y Amar Consciente. Vuelva al Origen de la alimentación natural y saludable." />
-  <meta name="keywords" content="alimentación consciente, vida sana, comida saludable, bienestar, verduras, frutas, comida real" />
-  <meta name="author" content="Conscientemente">
-  <title>Conscientemente - Comer, Sentir y Amar Consciente</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conscientemente | Cocina y Alimentación Saludable</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
+    * {
+      box-sizing: border-box;
     }
-    header, footer {
-      background-color: #3a5a40;
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f8f5;
+      color: #2a3d2f;
+    }
+
+    header {
+      background-color: #4caf50;
       color: white;
+      padding: 1.5rem;
       text-align: center;
+    }
+
+    nav {
+      background-color: #388e3c;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
       padding: 1rem;
     }
+
     nav a {
-      margin: 0 15px;
       color: white;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
     }
-    .hero {
+
+    nav a:hover {
+      color: #d0f0c0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 0.5rem;
+    }
+
+    .img-responsive {
       width: 100%;
-      height: auto;
+      border-radius: 10px;
+      margin: 1rem 0;
     }
-    .section {
-      padding: 2rem;
-    }
-    .section img {
-      max-width: 100%;
-      height: auto;
+
+    .tips, .links {
+      background-color: #d0f0c0;
+      padding: 1rem;
       border-radius: 8px;
     }
-    .responsive-table {
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0;
       width: 100%;
-      border-collapse: collapse;
+      height: 100%;
     }
-    .responsive-table th, .responsive-table td {
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      text-align: left;
-    }
-    .formulario {
-      background-color: #e9f5ec;
-      padding: 2rem;
-      border-radius: 10px;
-      max-width: 500px;
-      margin: auto;
-    }
-    input, textarea, button {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #588157;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
+
+    footer {
+      background-color: #e6f0e9;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Conscientemente</h1>
     <p>Comer, Sentir y Amar Consciente</p>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#alimentos">Alimentos</a>
-      <a href="#formulario">Contacto</a>
-    </nav>
   </header>
 
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#recetas">Recetas</a>
+    <a href="#consejos">Consejos</a>
+    <a href="#video">Video</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
   <main>
-    <section id="inicio" class="section">
-      <img src="/mnt/data/1.Foto de Portada.jpg" alt="Vuelva al Origen - Mesa con alimentos naturales" class="hero">
-      <h2>Bienvenidos a Conscientemente</h2>
-      <p>Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos.</p>
+    <section id="inicio">
+      <h2>Bienvenida</h2>
+      <p>
+        Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos. 
+        En este espacio encontrarás ideas, inspiración y recetas que nutren cuerpo y alma.
+      </p>
+      <img src="https://images.unsplash.com/photo-1512058564366-c9e2f1db0b51?auto=format&fit=crop&w=1000&q=80" alt="Mesa con comida saludable" class="img-responsive">
     </section>
 
-    <section id="alimentos" class="section">
-      <h2>Alimentos Saludables</h2>
-      <p>La naturaleza nos ofrece una riqueza de alimentos vivos que nutren cuerpo y alma. Aquí destacamos algunos de los más importantes:</p>
-
-      <img src="/mnt/data/Carusel..Los Alimentos Saludables.png" alt="Carusel de alimentos saludables">
-
+    <section id="recetas">
+      <h2>Receta destacada: Ensalada arcoíris</h2>
       <ul>
-        <li>Frutas y Verduras frescas</li>
-        <li>Grasas saludables como aguacate y frutos secos</li>
-        <li>Fuentes de proteína natural</li>
+        <li>1 taza de hojas verdes</li>
+        <li>1/2 taza de zanahoria rallada</li>
+        <li>1/2 taza de remolacha cocida en cubos</li>
+        <li>1/2 aguacate</li>
+        <li>Semillas de girasol</li>
+        <li>Aliño: limón, aceite de oliva, sal marina</li>
       </ul>
-
-      <img src="/mnt/data/dentro la sección de.Alimentos.saludables.-Vedruras y Frutas.jpeg" alt="Corazón de vegetales y frutas coloridas">
-
-      <h3>Tabla de nutrientes esenciales</h3>
-      <table class="responsive-table">
-        <thead>
-          <tr>
-            <th>Alimento</th>
-            <th>Beneficio</th>
-            <th>Grupo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Aguacate</td>
-            <td>Grasa saludable y fibra</td>
-            <td>Fruta</td>
-          </tr>
-          <tr>
-            <td>Brócoli</td>
-            <td>Alto en vitamina C y fibra</td>
-            <td>Verdura</td>
-          </tr>
-          <tr>
-            <td>Salmón</td>
-            <td>Omega-3 y proteína</td>
-            <td>Pescado</td>
-          </tr>
-        </tbody>
-      </table>
+      <p>Combina todos los ingredientes en un bowl. Disfruta de una comida viva y llena de color.</p>
+      <img src="https://images.unsplash.com/photo-1572438521733-2578fda8f30e?auto=format&fit=crop&w=1000&q=80" alt="Ensalada colorida" class="img-responsive">
     </section>
 
-    <section id="formulario" class="section">
-      <h2>Contáctanos</h2>
-      <form class="formulario" action="#" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+    <section id="consejos">
+      <h2>Consejos de Cocina Consciente</h2>
+      <div class="tips">
+        <ul>
+          <li>Cocina sin prisa: elige un momento tranquilo para preparar tus comidas.</li>
+          <li>Siente los ingredientes con las manos, huele, observa, agradece.</li>
+          <li>Escoge alimentos reales, sin etiquetas, lo más cercanos a su estado natural.</li>
+          <li>Usa colores en tu plato: los pigmentos vegetales son antioxidantes naturales.</li>
+        </ul>
+      </div>
+    </section>
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
+    <section id="video">
+      <h2>Video Inspirador</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/3fX2I0xA1Ck" title="Video de alimentación saludable" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
+    <section id="contacto">
+      <h2>Contacto y Recursos</h2>
+      <p>¿Quieres aprender más? Estos enlaces te pueden ayudar:</p>
+      <div class="links">
+        <ul>
+          <li><a href="https://nutricion.org" target="_blank">Sociedad Española de Nutrición</a></li>
+          <li><a href="https://www.eatforum.org" target="_blank">EAT - Alimentación sostenible</a></li>
+          <li><a href="mailto:hola@conscientemente.com">Escríbenos</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Conscientemente. Todos los derechos reservados.</p>
+    &copy; 2025 Conscientemente. Cocina y alimentación saludable para todos.
   </footer>
-
 </body>
 </html>
