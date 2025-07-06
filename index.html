@@ -1,170 +1,390 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conscientemente | Cocina y Alimentación Saludable</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conscientemente | Cocina y Alimentación Saludable</title>
+    
+    <!-- Google Fonts para una tipografía más elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f0f8f5;
-      color: #2a3d2f;
-    }
+    <style>
+        /* 1. CONFIGURACIÓN Y VARIABLES (MEJORA) */
+        :root {
+            --color-primary: #2e7d32;      /* Verde Bosque */
+            --color-secondary: #66bb6a;   /* Verde Claro */
+            --color-background: #f1f8e9;  /* Verde Pálido (Fondo) */
+            --color-text: #333333;         /* Gris Oscuro (Texto) */
+            --color-white: #ffffff;
+            --font-headings: 'Lora', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --content-width: 1100px;
+            --border-radius: 8px;
+        }
 
-    header {
-      background-color: #4caf50;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
+        /* 2. ESTILOS GENERALES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav {
-      background-color: #388e3c;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
 
-    nav a:hover {
-      color: #d0f0c0;
-    }
+        /* 3. HEADER Y NAVEGACIÓN (MEJORA) */
+        header {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 2rem 1rem;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        header h1 {
+            font-family: var(--font-headings);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+        .main-nav {
+            background-color: #256a28;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Para que se adapte en móviles */
+            gap: 1.5rem;
+            position: sticky; /* Header fijo */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-    section {
-      margin-bottom: 3rem;
-    }
+        .main-nav a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s, transform 0.2s;
+        }
 
-    h2 {
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 0.5rem;
-    }
+        .main-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
 
-    .img-responsive {
-      width: 100%;
-      border-radius: 10px;
-      margin: 1rem 0;
-    }
+        /* 4. CONTENIDO PRINCIPAL */
+        main {
+            max-width: var(--content-width);
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
 
-    .tips, .links {
-      background-color: #d0f0c0;
-      padding: 1rem;
-      border-radius: 8px;
-    }
+        section {
+            background-color: var(--color-white);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            scroll-margin-top: 100px; /* Espacio para el nav fijo */
+        }
 
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-    }
+        h2 {
+            font-family: var(--font-headings);
+            font-size: 2rem;
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-secondary);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .video-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-    }
+        h3 {
+             font-family: var(--font-headings);
+             font-size: 1.5rem;
+             color: #388e3c;
+             margin-top: 1.5rem;
+             margin-bottom: 1rem;
+        }
+        
+        p, li {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+        }
 
-    footer {
-      background-color: #e6f0e9;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-  </style>
+        .img-responsive {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 5. NUEVOS ESTILOS: BLOG */
+        .blog-post {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .post-meta {
+            font-size: 0.9rem;
+            color: #757575;
+            font-style: italic;
+        }
+        .comments-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        .comment {
+            background-color: var(--color-background);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--color-secondary);
+        }
+        .comment p {
+            margin-bottom: 0.5rem;
+        }
+        .comment-author {
+            font-weight: bold;
+            color: var(--color-primary);
+            font-size: 0.9rem;
+        }
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #ccc;
+            font-family: var(--font-body);
+        }
+        .comment-form button {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .comment-form button:hover {
+            background-color: #1b5e20;
+        }
+
+        /* 6. NUEVOS ESTILOS: FAQ (Acordeón) */
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .faq-item summary {
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 0;
+            cursor: pointer;
+            list-style: none; /* Oculta el marcador por defecto */
+            position: relative;
+            padding-right: 2rem;
+        }
+        .faq-item summary::after { /* Crea un marcador personalizado (+) */
+            content: '+';
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+        .faq-item[open] summary::after { /* Cambia el marcador a (-) cuando está abierto */
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .faq-item .faq-content {
+            padding-bottom: 1rem;
+        }
+
+        /* 7. FOOTER */
+        footer {
+            background-color: #e8f5e9;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 2rem;
+            border-top: 1px solid #dcedc8;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Conscientemente</h1>
-    <p>Comer, Sentir y Amar Consciente</p>
-  </header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#recetas">Recetas</a>
-    <a href="#consejos">Consejos</a>
-    <a href="#video">Video</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+    <header>
+        <h1>Conscientemente</h1>
+        <p>Come, Siente, Ama, Vive</p>
+    </header>
 
-  <main>
-    <section id="inicio">
-      <h2>Bienvenida</h2>
-      <p>
-        Aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos. 
-        En este espacio encontrarás ideas, inspiración y recetas que nutren cuerpo y alma.
-      </p>
-      <img src="https://images.unsplash.com/photo-1512058564366-c9e2f1db0b51?auto=format&fit=crop&w=1000&q=80" alt="Mesa con comida saludable" class="img-responsive">
-    </section>
+    <!-- NAVEGACIÓN ACTUALIZADA -->
+    <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#acerca-de">Acerca de</a>
+        <a href="#alimentos">Alimentos</a>
+        <a href="#recetas">Recetas</a>
+        <a href="#video">Vídeo</a>
+        <a href="#blog">Blog</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
-    <section id="recetas">
-      <h2>Receta destacada: Ensalada arcoíris</h2>
-      <ul>
-        <li>1 taza de hojas verdes</li>
-        <li>1/2 taza de zanahoria rallada</li>
-        <li>1/2 taza de remolacha cocida en cubos</li>
-        <li>1/2 aguacate</li>
-        <li>Semillas de girasol</li>
-        <li>Aliño: limón, aceite de oliva, sal marina</li>
-      </ul>
-      <p>Combina todos los ingredientes en un bowl. Disfruta de una comida viva y llena de color.</p>
-      <img src="https://images.unsplash.com/photo-1572438521733-2578fda8f30e?auto=format&fit=crop&w=1000&q=80" alt="Ensalada colorida" class="img-responsive">
-    </section>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenidos a vuestro espacio</h2>
+            <p>
+                En Conscientemente aún no tenemos productos, pero sí una visión clara: transformar cómo comemos, sentimos y vivimos. 
+                En este espacio encontrarás ideas, inspiración, recetas y consejos para una Vida Sana y un camino más adecuado para abrir la Conciencia.
+            </p>
+            <!-- FOTO 1 - PORTADA -->
+            <img src="foto-1.jpg" alt="Mesa de madera rústica con una variedad de alimentos saludables como salmón, aguacate, brócoli y arándanos." class="img-responsive">
+        </section>
 
-    <section id="consejos">
-      <h2>Consejos de Cocina Consciente</h2>
-      <div class="tips">
-        <ul>
-          <li>Cocina sin prisa: elige un momento tranquilo para preparar tus comidas.</li>
-          <li>Siente los ingredientes con las manos, huele, observa, agradece.</li>
-          <li>Escoge alimentos reales, sin etiquetas, lo más cercanos a su estado natural.</li>
-          <li>Usa colores en tu plato: los pigmentos vegetales son antioxidantes naturales.</li>
-        </ul>
-      </div>
-    </section>
+        <section id="acerca-de">
+            <h2>¿Qué es la Cocina Sana?</h2>
+            <p>Cocina Sana no es una dieta. Es una forma de vivir, una filosofía que se basa en estos principios:</p>
+            <ul>
+                <li>Volver al origen: elegir ingredientes naturales y frescos.</li>
+                <li>Cocinar con intuición y respeto por el alimento.</li>
+                <li>Servir con cariño, convirtiendo cada comida en un acto de amor.</li>
+            </ul>
+            <!-- FOTO 3 - QUÉ ES LA COCINA SANA -->
+            <img src="foto-3.jpg" alt="Manos de una persona preparando con cariño una ensalada fresca en un bol de madera." class="img-responsive">
+        </section>
 
-    <section id="video">
-      <h2>Video Inspirador</h2>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/3fX2I0xA1Ck" title="Video de alimentación saludable" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
+        <section id="alimentos">
+            <h2>Alimentos Saludables</h2>
+            <p>Prioriza alimentos que te nutran y te llenen de energía. La naturaleza nos ofrece todo lo que necesitamos.</p>
+            <!-- FOTO 2 - ALIMENTOS SALUDABLES -->
+            <img src="foto-2.jpg" alt="Una gran variedad de frutas y verduras frescas y coloridas sobre una superficie." class="img-responsive">
+        </section>
 
-    <section id="contacto">
-      <h2>Contacto y Recursos</h2>
-      <p>¿Quieres aprender más? Estos enlaces te pueden ayudar:</p>
-      <div class="links">
-        <ul>
-          <li><a href="https://nutricion.org" target="_blank">Sociedad Española de Nutrición</a></li>
-          <li><a href="https://www.eatforum.org" target="_blank">EAT - Alimentación sostenible</a></li>
-          <li><a href="mailto:hola@conscientemente.com">Escríbenos</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+        <section id="recetas">
+            <h2>Receta destacada: Ensalada Arcoíris</h2>
+            <p>Una explosión de color, sabor y nutrientes. Fácil, rápida y deliciosa.</p>
+            <ul>
+                <li>1 taza de hojas verdes (espinacas, rúcula, lechuga)</li>
+                <li>1/2 taza de zanahoria rallada</li>
+                <li>1/2 taza de remolacha cocida en cubos</li>
+                <li>1/2 aguacate en láminas</li>
+                <li>Un puñado de semillas de girasol</li>
+                <li>Aliño: zumo de limón, aceite de oliva virgen extra y una pizca de sal marina.</li>
+            </ul>
+            <p>Combina todos los ingredientes en un bowl grande y aliña justo antes de servir. ¡Disfruta de una comida viva y llena de color!</p>
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1100&q=80" alt="Ensalada arcoíris vibrante y saludable en un bol blanco, vista desde arriba." class="img-responsive">
+        </section>
 
-  <footer>
-    &copy; 2025 Conscientemente. Cocina y alimentación saludable para todos.
-  </footer>
+        <!-- SECCIÓN DE VÍDEO RESTAURADA -->
+        <section id="video">
+            <h2>Vídeo Inspirador</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zjZk5r18nEo" title="Video de alimentación saludable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Nuestro Blog</h2>
+            <article class="blog-post">
+                <h3>El Arte de Comer Despacio</h3>
+                <p class="post-meta">Publicado por el Equipo Conscientemente el 6 de Julio, 2025</p>
+                <img src="https://images.unsplash.com/photo-1540420773420-2366e2c88c24?auto=format&fit=crop&w=1100&q=80" alt="Persona comiendo tranquilamente una ensalada, enfocada en su plato." class="img-responsive">
+                <p>En un mundo que se mueve a toda velocidad, hemos perdido el simple placer de comer despacio. La alimentación consciente nos invita a redescubrirlo, a saborear cada bocado, a escuchar las señales de nuestro cuerpo y a transformar nuestra relación con la comida...</p>
+                <a href="#">Leer más &rarr;</a>
+            </article>
+
+            <div class="comments-section">
+                <h3>Comentarios (2)</h3>
+                <div class="comment">
+                    <p>"¡Qué gran recordatorio! Lo pondré en práctica en mi próxima comida. Gracias por compartir."</p>
+                    <p class="comment-author">- Ana G.</p>
+                </div>
+                <div class="comment">
+                    <p>"Me encanta este enfoque. Realmente cambia la perspectiva y ayuda a disfrutar más de la comida y a sentirse más satisfecho."</p>
+                    <p class="comment-author">- Carlos M.</p>
+                </div>
+
+                <h3>Deja tu comentario</h3>
+                <form class="comment-form">
+                    <input type="text" name="name" placeholder="Tu nombre" required>
+                    <textarea name="comment" rows="4" placeholder="Escribe tu comentario aquí..." required></textarea>
+                    <button type="submit">Publicar Comentario</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+            <details class="faq-item">
+                <summary>¿Necesito ser vegetariano para comer de forma consciente?</summary>
+                <div class="faq-content">
+                    <p>No, en absoluto. La alimentación consciente es para todos, independientemente de tus preferencias dietéticas. Se centra en la calidad de los alimentos, la intención con la que comes y la conexión con tu cuerpo, más que en restringir grupos de alimentos.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Comer sano es mucho más caro?</summary>
+                <div class="faq-content">
+                    <p>No tiene por qué serlo. Comprar productos locales y de temporada, planificar las comidas para reducir el desperdicio y cocinar más en casa son estrategias excelentes para comer de forma saludable y económica. A menudo, los alimentos procesados y ultraprocesados tienen un coste mayor, no solo para el bolsillo sino también para la salud.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué es lo más importante para empezar?</summary>
+                <div class="faq-content">
+                    <p>Lo más importante es empezar con pequeños cambios sostenibles. No intentes cambiar todo de la noche a la mañana. Un buen primer paso podría ser simplemente añadir una porción extra de verduras a tu cena, beber un vaso más de agua al día o dedicar cinco minutos a comer sin distracciones. ¡Cada pequeño paso cuenta!</p>
+                </div>
+            </details>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto y Recursos</h2>
+            <p>¿Quieres aprender más? Estos enlaces te pueden ayudar en tu camino:</p>
+            <ul>
+                <li><a href="https://nutricion.org" target="_blank" rel="noopener noreferrer">Sociedad Española de Nutrición</a></li>
+                <li><a href="https://www.eatforum.org" target="_blank" rel="noopener noreferrer">EAT - Alimentación sostenible</a></li>
+                <li><a href="mailto:hola@conscientemente.com">Escríbenos un correo</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Conscientemente. Cocina y alimentación saludable para todos.</p>
+    </footer>
+
 </body>
 </html>
+
