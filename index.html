@@ -313,9 +313,33 @@
         <!-- SECCIÓN DE VÍDEO RESTAURADA -->
         <section id="video">
             <h2>Vídeo Inspirador</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/zjZk5r18nEo" title="Video de alimentación saludable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <!-- Miniatura que se ve antes de hacer clic -->
+<div class="youtube-video" data-id="AESANAgenciaEspSeguridadAlimentariayNutrición">
+  <img src="https://img.youtube.com/vi/AESANAgenciaEspSeguridadAlimentariayNutrición/hqdefault.jpg" alt="Video de YouTube">
+  <button>▶ Ver video</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll(".youtube-video");
+    videos.forEach(div => {
+      const id = div.dataset.id;
+      const button = div.querySelector("button");
+      button.addEventListener("click", () => {
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("src", `https://www.youtube.com/embed/${id}?autoplay=1`);
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        iframe.setAttribute("loading", "lazy");
+        iframe.style.width = "100%";
+        iframe.style.height = "315px";
+        div.innerHTML = "";
+        div.appendChild(iframe);
+      });
+    });
+  });
+</scr</script>
+    
         </section>
 
         <section id="blog">
